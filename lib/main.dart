@@ -9,6 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: '',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -46,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               Container(
                 child: Text(
-                    "The best online banking app.",
+                    "Login Form with flutter",
                   style: TextStyle(
                     color: Colors.grey,
                     fontWeight: FontWeight.bold,
@@ -63,12 +64,14 @@ class _MyHomePageState extends State<MyHomePage> {
                         children: [
                           TextFormField(
                             decoration: InputDecoration(
-                              hintText: "Account information",
+                              hintText: "Username",
                               prefixIcon: Icon(Icons.account_circle, color: Colors.amber,)
                             ),
                           ),
                           TextFormField(
+                            obscureText: true,
                             decoration: InputDecoration(
+
                               hintText: "Password",
                                 prefixIcon: Icon(Icons.lock, color: Colors.amber,)
                             )
